@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia Fit</title>
+
+<style>
+body{
+font-family:Verdana, sans-serif;
+margin:0;
+background:#f2f2f2;
+}
+
+header{
+background:#198754;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+header p{
+color:#ffe066;
+}
+
+main{
+width:90%;
+max-width:900px;
+margin:30px auto;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-left:8px solid #198754;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card h2{
+color:#198754;
+}
+
+.categoria{
+color:#555;
+font-style:italic;
+}
+
+.nota{
+color:#ff9500;
+font-size:20px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+}
+</style>
+
 </head>
+
 <body>
-    
+
+<header>
+<h1>🏋️ Academia Fit</h1>
+<p>Conheça alguns dos principais exercícios para fortalecer o corpo.</p>
+</header>
+
+<main>
+
+<div class="card">
+<h2>💪 Supino</h2>
+<p class="categoria">Grupo muscular: Peitoral</p>
+<p class="nota">★★★★★</p>
+<p>Exercício ideal para desenvolver força e massa muscular no peitoral, ombros e tríceps.</p>
+<button>❤️<span>0</span></button>
+<button>👎<span>0</span></button>
+</div>
+
+<div class="card">
+<h2>🏋️ Agachamento</h2>
+<p class="categoria">Grupo muscular: Pernas</p>
+<p class="nota">★★★★★</p>
+<p>Um dos exercícios mais completos, fortalecendo quadríceps, glúteos e posteriores.</p>
+<button>❤️<span>0</span></button>
+<button>👎<span>0</span></button>
+</div>
+
+<div class="card">
+<h2>🔥 Levantamento Terra</h2>
+<p class="categoria">Grupo muscular: Corpo inteiro</p>
+<p class="nota">★★★★☆</p>
+<p>Excelente para desenvolver força, trabalhando costas, pernas, glúteos e abdômen.</p>
+<button>❤️<span>0</span></button>
+<button>👎<span>0</span></button>
+</div>
+
+<div class="card">
+<h2>🏃 Esteira</h2>
+<p class="categoria">Categoria: Cardio</p>
+<p class="nota">★★★★☆</p>
+<p>Ajuda a melhorar o condicionamento físico, aumentar a resistência e queimar calorias.</p>
+<button>❤️<span>0</span></button>
+<button>👎<span>0</span></button>
+</div>
+
+</main>
+
+<footer>
+<p>© 2026 - Academia Fit | Saúde, força e qualidade de vida</p>
+</footer>
+
 </body>
+
+<script>
+// Seleciona todos os botões da página
+const botoes = document.querySelectorAll("button");
+
+botoes.forEach(function(botao) {
+botao.addEventListener("click", function() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
+
+// Converte o texto atual para número, soma +1 e atualiza o elemento
+let valorAtual = parseInt(texto.textContent);
+texto.textContent = valorAtual + 1;
+});
+});
+</script>
 </html>
